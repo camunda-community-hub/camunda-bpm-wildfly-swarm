@@ -1,0 +1,12 @@
+{
+  "server": {
+    "host": "localhost",
+    "port": 9990,
+    "user": "admin",
+    "pass": "admin"
+  },
+  "module": "org.camunda.bpm.swarm.configuration",
+  "generatorTargets": [
+    "/subsystem=camunda-bpm-platform"
+  ]
+}
