@@ -19,7 +19,22 @@
 
   <properties>
     <version.java>1.8</version.java>
+    <license.includeTransitiveDependencies>false</license.includeTransitiveDependencies>
   </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>license-maven-plugin</artifactId>
+        <version>1.14</version>
+        <configuration>
+          <acceptPomPackaging>true</acceptPomPackaging>
+          <excludedScopes>test</excludedScopes>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
 
   <modules>
     <module>config-api</module>
