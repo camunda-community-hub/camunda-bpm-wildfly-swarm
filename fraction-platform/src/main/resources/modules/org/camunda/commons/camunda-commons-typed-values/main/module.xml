@@ -1,0 +1,12 @@
+<module xmlns="urn:jboss:module:1.3" name="org.camunda.commons.camunda-commons-typed-values">
+  <resources>
+    <artifact name="org.camunda.commons:camunda-commons-typed-values:${version.camunda.commons}" />
+  </resources>
+
+  <dependencies>
+    <module name="javax.api"/>
+    
+    <module name="org.camunda.commons.camunda-commons-utils" />
+    
+  </dependencies>
+</module>

@@ -1,0 +1,10 @@
+<module xmlns="urn:jboss:module:1.3" name="org.codehaus.groovy.groovy-all">
+  <resources>
+    <artifact name="org.codehaus.groovy:groovy-all:2.4.5" />
+  </resources>
+
+  <dependencies>
+    <module name="javax.api" />
+    <module name="org.camunda.spin.camunda-spin-core" />
+  </dependencies>
+</module>

@@ -1,0 +1,5 @@
+<module xmlns="urn:jboss:module:1.3" name="org.camunda.bpm.dmn.camunda-engine-feel-api">
+  <resources>
+    <artifact name="org.camunda.bpm.dmn:camunda-engine-feel-api:${camunda.version}" />
+  </resources>
+</module>
