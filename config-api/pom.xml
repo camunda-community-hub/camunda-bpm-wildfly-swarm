@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>camunda-bpm-swarm-root</artifactId>
-    <groupId>org.camunda.swarm</groupId>
+    <groupId>org.wildfly.swarm</groupId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
 
@@ -20,9 +20,8 @@
     <cargo.deploy.timeout>60000</cargo.deploy.timeout>
     <jboss.http.port>8080</jboss.http.port>
     <jboss.management.port>9990</jboss.management.port>
-    <version.wildfly11>11.0.0.Final</version.wildfly11>
     <wildfly.unpack.location>${project.build.directory}/wildfly-assembly</wildfly.unpack.location>
-    <wildfly.runtime.location>${wildfly.unpack.location}/server/wildfly-${version.wildfly11}/</wildfly.runtime.location>
+    <wildfly.runtime.location>${wildfly.unpack.location}/server/wildfly-${version.wildfly}/</wildfly.runtime.location>
   </properties>
 
   <dependencies>
@@ -44,6 +43,7 @@
 
   <build>
     <plugins>
+      <!-- unpack Wildfly distribution -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
@@ -71,6 +71,7 @@
           </execution>
         </executions>
       </plugin>
+      <!-- run Wildfly and stop later -->
       <plugin>
         <groupId>org.codehaus.cargo</groupId>
         <artifactId>cargo-maven2-plugin</artifactId>
@@ -119,6 +120,7 @@
           </deployables>
         </configuration>
       </plugin>
+      <!-- generate Config API -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
