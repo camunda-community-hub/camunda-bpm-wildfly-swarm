@@ -71,16 +71,6 @@
     <!-- WildFly Swarm Fractions -->
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
-      <artifactId>camunda-bpm-swarm-fraction-platform</artifactId>
-      <version>${project.version}</version>
-    </dependency>
-    <!--<dependency>-->
-      <!--<groupId>org.wildfly.swarm</groupId>-->
-      <!--<artifactId>camunda-bpm-swarm-fraction-rest</artifactId>-->
-      <!--<version>${project.version}</version>-->
-    <!--</dependency>-->
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
       <artifactId>camunda-bpm-swarm-fraction-webapp</artifactId>
       <version>${project.version}</version>
     </dependency>
@@ -166,9 +156,6 @@
         <groupId>org.wildfly.swarm</groupId>
         <artifactId>wildfly-swarm-plugin</artifactId>
         <version>${version.swarm}</version>
-        <!--<configuration>-->
-          <!--<bundleDependencies>true</bundleDependencies>-->
-        <!--</configuration>-->
         <executions>
           <execution>
             <goals>

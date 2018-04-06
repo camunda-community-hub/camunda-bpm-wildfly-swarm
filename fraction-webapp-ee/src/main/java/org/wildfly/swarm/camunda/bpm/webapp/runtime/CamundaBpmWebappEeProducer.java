@@ -3,6 +3,7 @@ package org.wildfly.swarm.camunda.bpm.webapp.runtime;
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
+import java.util.List;
 import java.util.logging.Logger;
 import org.jboss.shrinkwrap.api.Archive;
 import org.wildfly.swarm.bootstrap.env.ApplicationEnvironment;
@@ -15,7 +16,7 @@ import org.wildfly.swarm.spi.api.ArtifactLookup;
 @ApplicationScoped
 public class CamundaBpmWebappEeProducer {
 
-  public static final String MODULE = "org.wildfly.swarm.camunda.bpm.swarm.fraction.webapp";        //TODO why this module looks like this???
+  public static final String MODULE = "org.wildfly.swarm.camunda.bpm.swarm.fraction.webapp.ee";        //TODO why this module looks like this???
 
   private static final Logger LOGGER = Logger.getLogger("CamundaBpmWebappEeProducer");
 
