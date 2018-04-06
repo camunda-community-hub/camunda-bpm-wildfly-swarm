@@ -31,6 +31,25 @@
     <license.includeTransitiveDependencies>false</license.includeTransitiveDependencies>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.wildfly.swarm</groupId>
+        <artifactId>bom-all</artifactId>
+        <version>${version.swarm}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.camunda.bpm</groupId>
+        <artifactId>camunda-bom</artifactId>
+        <version>${camunda.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <build>
     <plugins>
       <plugin>
@@ -50,7 +69,8 @@
     <module>fraction-platform</module>
     <module>fraction-rest</module>
     <module>example</module>
-    <!--<module>fraction-webapp</module>-->
+    <module>fraction-webapp</module>
+    <module>fraction-webapp-ee</module>
   </modules>
 
   <!--<profiles>-->

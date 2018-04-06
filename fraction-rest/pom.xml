@@ -37,25 +37,6 @@
       </repository>
     </repositories>
 
-    <dependencyManagement>
-      <dependencies>
-        <dependency>
-          <groupId>org.wildfly.swarm</groupId>
-          <artifactId>bom-all</artifactId>
-          <version>${version.swarm}</version>
-          <type>pom</type>
-          <scope>import</scope>
-        </dependency>
-        <dependency>
-          <groupId>org.camunda.bpm</groupId>
-          <artifactId>camunda-bom</artifactId>
-          <version>${camunda.version}</version>
-          <type>pom</type>
-          <scope>import</scope>
-        </dependency>
-      </dependencies>
-    </dependencyManagement>
-
     <dependencies>
       <dependency>
         <groupId>org.camunda.bpm</groupId>
@@ -70,7 +51,7 @@
         <groupId>org.wildfly.swarm</groupId>
         <artifactId>camunda-bpm-swarm-fraction-platform</artifactId>
         <version>${project.version}</version>
-        <!--<scope>compile</scope>-->
+        <scope>compile</scope>
       </dependency>
 
       <dependency>

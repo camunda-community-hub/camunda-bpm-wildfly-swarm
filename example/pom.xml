@@ -74,12 +74,16 @@
       <artifactId>camunda-bpm-swarm-fraction-platform</artifactId>
       <version>${project.version}</version>
     </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.wildfly.swarm</groupId>-->
+      <!--<artifactId>camunda-bpm-swarm-fraction-rest</artifactId>-->
+      <!--<version>${project.version}</version>-->
+    <!--</dependency>-->
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
-      <artifactId>camunda-bpm-swarm-fraction-rest</artifactId>
+      <artifactId>camunda-bpm-swarm-fraction-webapp</artifactId>
       <version>${project.version}</version>
     </dependency>
-
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
       <artifactId>jpa</artifactId>

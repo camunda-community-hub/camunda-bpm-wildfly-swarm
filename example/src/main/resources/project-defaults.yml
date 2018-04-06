@@ -3,7 +3,7 @@ swarm:
     data-sources:
       ProcessEngine:
         jndi-name: "java:jboss/datasources/ProcessEngine"
-        connection-url: "jdbc:h2:target/camunda-h2-dbs/process-engine;DB_CLOSE_DELAY=-1;MVCC=TRUE;DB_CLOSE_ON_EXIT=FALSE"
+        connection-url: "jdbc:h2:./target/camunda-h2-dbs/process-engine;DB_CLOSE_DELAY=-1;MVCC=TRUE;DB_CLOSE_ON_EXIT=FALSE"
         transaction-isolation: "TRANSACTION_READ_COMMITTED"
         driver-name: "h2"
         jta: "true"
