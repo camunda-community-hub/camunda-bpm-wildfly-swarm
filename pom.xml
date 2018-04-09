@@ -20,11 +20,14 @@
   <properties>
     <version.swarm>2017.5.0</version.swarm>
     <version.wildfly.swarm.fraction.plugin>54</version.wildfly.swarm.fraction.plugin>
+    <version.wildfly-config>1.0.3.Final</version.wildfly-config>
     <version.java>1.8</version.java>
+
     <!-- for SNAPSHOT versions ${camunda.version} and ${camunda-webapp-ee.version} will be the same, for released versions, the latter must be with -ee suffix -->
     <camunda.version>7.9.0-SNAPSHOT</camunda.version>
     <camunda-webapp-ee.version>${camunda.version}</camunda-webapp-ee.version>            <!-- for SNAPSHOT versions -->
     <!--<camunda-webapp-ee.version>${camunda.version}-ee</camunda-webapp-ee.version> -->             <!-- for released versions -->
+
     <version.mybatis>3.4.4</version.mybatis>
     <version.wildfly>11.0.0.Final</version.wildfly>
     <version.camunda.commons>1.5.0</version.camunda.commons>
@@ -32,7 +35,16 @@
     <version.camunda.spin>1.5.0</version.camunda.spin>
     <version.camunda.template-engines>1.0.1</version.camunda.template-engines>
     <license.includeTransitiveDependencies>false</license.includeTransitiveDependencies>
+    <swarm.fraction.stability>stable</swarm.fraction.stability>
   </properties>
+
+  <repositories>
+    <repository>
+      <id>camunda-bpm-nexus</id>
+      <name>camunda-bpm-nexus</name>
+      <url>https://app.camunda.com/nexus/content/groups/public</url>
+    </repository>
+  </repositories>
 
   <dependencyManagement>
     <dependencies>
@@ -53,7 +65,25 @@
     </dependencies>
   </dependencyManagement>
 
+
   <build>
+    <pluginManagement>
+        <plugins>
+          <plugin>
+            <groupId>org.wildfly.swarm</groupId>
+            <artifactId>wildfly-swarm-fraction-plugin</artifactId>
+            <version>${version.wildfly.swarm.fraction.plugin}</version>
+            <executions>
+              <execution>
+                <phase>process-classes</phase>
+                <goals>
+                  <goal>process</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+    </pluginManagement>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>

@@ -13,31 +13,11 @@
 
   <packaging>jar</packaging>
 
-  <properties>
-    <swarm.fraction.stability>stable</swarm.fraction.stability>
-  </properties>
-
   <repositories>
-    <repository>
-      <id>jboss-public-repository-group</id>
-      <name>JBoss Public Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
     <repository>
       <id>camunda-bpm-nexus</id>
       <name>camunda-bpm-nexus</name>
-      <url>https://app.camunda.com/nexus/content/groups/public</url>
-    </repository>
-    <repository>
-      <id>camunda-bpm-ee</id>
-      <name>camunda-bpm-ee</name>
-      <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-ee</url>
+      <url>https://app.camunda.com/nexus/content/groups/private</url>
     </repository>
   </repositories>
 
@@ -59,11 +39,6 @@
     </dependency>
 
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>undertow</artifactId>
-    </dependency>
-
-    <dependency>
       <groupId>javax.enterprise</groupId>
       <artifactId>cdi-api</artifactId>
       <version>1.2</version>
@@ -76,14 +51,6 @@
       <plugin>
         <groupId>org.wildfly.swarm</groupId>
         <artifactId>wildfly-swarm-fraction-plugin</artifactId>
-        <executions>
-          <execution>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>process</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>

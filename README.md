@@ -1,11 +1,11 @@
 # Camunda Wildfly Swarm extension
 
-This Camunda community extension provides Wildfly Swarm fractions, which can be used to easily include Camunda in you Wildfly Swarm applications.
+This Camunda community extension provides Wildfly Swarm fractions, which can be used to easily include Camunda in your Wildfly Swarm applications.
 You would need to add [Camunda BOM](https://docs.camunda.org/get-started/apache-maven/) and "Swarm fraction(s)" to your POM file. Available fractions are:
 
 * `camunda-bpm-swarm-fraction-platform` for Camunda engine
 * `camunda-bpm-swarm-fraction-rest` for Camunda REST API
-* `camunda-bpm-swarm-fraction-webapp` for Camudnda Webapps
+* `camunda-bpm-swarm-fraction-webapp(-ee)` for Camudnda Webapps
 
 Example:
 

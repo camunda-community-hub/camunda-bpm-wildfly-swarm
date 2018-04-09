@@ -15,8 +15,8 @@ import org.wildfly.swarm.spi.api.annotations.WildFlySubsystem;
 @MarshalDMR
 @WildFlyExtension(module = "org.camunda.bpm.wildfly.camunda-wildfly-subsystem")
 @WildFlySubsystem("camunda-bpm-platform")
-public class CamundaBpmnEngineFraction extends CamundaBpmPlatform<CamundaBpmnEngineFraction>
-  implements Fraction<CamundaBpmnEngineFraction> {
+public class CamundaBpmPlatformFraction extends CamundaBpmPlatform<CamundaBpmPlatformFraction>
+  implements Fraction<CamundaBpmPlatformFraction> {
 
   private static final String DEFAULT = "default";
 
@@ -25,13 +25,13 @@ public class CamundaBpmnEngineFraction extends CamundaBpmPlatform<CamundaBpmnEng
    *
    * @return The configured fraction.
    */
-  public static CamundaBpmnEngineFraction createDefaultFraction() {
-    CamundaBpmnEngineFraction fraction = new CamundaBpmnEngineFraction();
+  public static CamundaBpmPlatformFraction createDefaultFraction() {
+    CamundaBpmPlatformFraction fraction = new CamundaBpmPlatformFraction();
     return fraction.applyDefaults();
   }
 
   @Override
-  public CamundaBpmnEngineFraction applyDefaults() {
+  public CamundaBpmPlatformFraction applyDefaults() {
     jobExecutor(
       new JobExecutor<>(DEFAULT)
         .jobAcquisitions(

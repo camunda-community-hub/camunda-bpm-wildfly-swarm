@@ -1,0 +1,12 @@
+<module xmlns="urn:jboss:module:1.3" name="org.wildfly.swarm.camunda-bpm-swarm-config-api">
+  <resources>
+    <artifact name="org.wildfly.swarm:camunda-bpm-swarm-config-api:${project.version}" />
+  </resources>
+
+  <dependencies>
+
+    <module name="javax.api" />
+    <module name="org.wildfly.swarm.config-api-runtime"/>
+
+  </dependencies>
+</module>

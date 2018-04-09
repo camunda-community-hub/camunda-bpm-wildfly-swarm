@@ -30,6 +30,7 @@ public class CamundaBpmRestProducer {
     String gav = group + ":" + artifact + ":" + packaging + ":" + classifier + ":" + version;
 
     Archive deployment = this.lookup.artifact(gav, deploymentName);
+    System.out.println("deployment " + deployment);
 
     return deployment;
   }

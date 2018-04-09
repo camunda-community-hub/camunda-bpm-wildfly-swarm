@@ -17,26 +17,6 @@
     <swarm.fraction.stability>stable</swarm.fraction.stability>
   </properties>
 
-  <repositories>
-    <repository>
-      <id>jboss-public-repository-group</id>
-      <name>JBoss Public Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-
-    <repository>
-      <id>camunda-bpm-nexus</id>
-      <name>camunda-bpm-nexus</name>
-      <url>https://app.camunda.com/nexus/content/groups/public</url>
-    </repository>
-  </repositories>
-
   <dependencies>
     <dependency>
       <groupId>org.camunda.bpm</groupId>
@@ -75,6 +55,7 @@
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
       <artifactId>spi</artifactId>
+      <version>${version.swarm}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -89,44 +70,12 @@
       <version>1.2</version>
       <scope>provided</scope>
     </dependency>
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>spi</artifactId>
-      <version>${version.swarm}</version>
-      <scope>provided</scope>
-    </dependency>
-    <!-- ??? -->
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>container</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>ee</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>ejb</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>undertow</artifactId>
-    </dependency>
+    <!--<dependency>-->
+      <!--<groupId>org.jboss.spec.javax.sql</groupId>-->
+      <!--<artifactId>jboss-javax-sql-api_7.0_spec</artifactId>-->
+      <!--<version>${version.org.jboss.spec.javax.sql.jboss-javax-sql-api_7.0_spec}</version>-->
+    <!--</dependency>-->
   </dependencies>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>jboss-public-repository-group</id>
-      <name>JBoss Public Repository Group</name>
-      <url>https://repository.jboss.org/nexus/content/groups/public/</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </pluginRepository>
-  </pluginRepositories>
 
   <build>
     <resources>
@@ -139,15 +88,6 @@
       <plugin>
         <groupId>org.wildfly.swarm</groupId>
         <artifactId>wildfly-swarm-fraction-plugin</artifactId>
-        <version>${version.wildfly.swarm.fraction.plugin}</version>
-        <executions>
-          <execution>
-            <phase>process-classes</phase>
-            <goals>
-              <goal>process</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
