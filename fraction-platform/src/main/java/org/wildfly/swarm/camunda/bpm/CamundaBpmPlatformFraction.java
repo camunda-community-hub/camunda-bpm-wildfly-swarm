@@ -44,12 +44,6 @@ public class CamundaBpmPlatformFraction extends CamundaBpmPlatform<CamundaBpmPla
         .maxThreads(5)
         .queueLength(10));
 
-//    Map<String, Map> spinPlugin = new HashMap<>();
-//    spinPlugin.put("org.camunda.spin.plugin.impl.SpinProcessEnginePlugin", null);
-//
-//    Map<String, Map> connectPlugin = new HashMap<>();
-//    connectPlugin.put("org.camunda.connect.plugin.impl.ConnectProcessEnginePlugin", null);
-
     processEngines(
       new ProcessEngines<>(DEFAULT)
         .name(org.camunda.bpm.engine.ProcessEngines.NAME_DEFAULT)
@@ -61,7 +55,6 @@ public class CamundaBpmPlatformFraction extends CamundaBpmPlatform<CamundaBpmPla
         .property("authorizationEnabled", "true")
         .property("jobExecutorDeploymentAware", "true")
         .property("historyCleanupBatchWindowStartTime", "00:01")
-//      .plugins(spinPlugin, connectPlugin)
     );
     return this;
   }

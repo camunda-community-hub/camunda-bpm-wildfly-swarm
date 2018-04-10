@@ -45,7 +45,7 @@
     <!-- WildFly Swarm Fractions -->
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
-      <artifactId>camunda-bpm-swarm-fraction-webapp-ee</artifactId>
+      <artifactId>camunda-bpm-swarm-fraction-webapp</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -138,11 +138,7 @@
           </execution>
         </executions>
         <configuration>
-          <debugPort>5005</debugPort>
           <mainClass>org.wildfly.swarm.camunda.bpm.ExampleMain</mainClass>
-          <properties>
-            <swarm.debug.port>5005</swarm.debug.port>
-          </properties>
         </configuration>
       </plugin>
       <plugin>
