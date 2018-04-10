@@ -65,7 +65,6 @@
     </dependencies>
   </dependencyManagement>
 
-
   <build>
     <pluginManagement>
         <plugins>
@@ -118,5 +117,28 @@
       </modules>
     </profile>
   </profiles>
+
+  <scm>
+    <connection>scm:git:git@github.com:camunda/camunda-bpm-wildfly-swarm.git</connection>
+    <url>scm:git:git@github.com:camunda/camunda-bpm-wildfly-swarm.git</url>
+    <developerConnection>scm:git:git@github.com:camunda/camunda-bpm-wildfly-swarm.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <distributionManagement>
+    <repository>
+      <id>camunda-nexus</id>
+      <name>camunda bpm community extensions</name>
+      <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-community-extensions</url>
+    </repository>
+    <snapshotRepository>
+      <id>camunda-nexus</id>
+      <name>camunda bpm community extensions snapshots</name>
+      <url>https://app.camunda.com/nexus/content/repositories/camunda-bpm-community-extensions-snapshots</url>
+      <!-- for maven 2 compatibility -->
+      <uniqueVersion>true</uniqueVersion>
+    </snapshotRepository>
+  </distributionManagement>
+
 
 </project>
