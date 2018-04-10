@@ -18,8 +18,8 @@
   <version>1.0.0-SNAPSHOT</version>
 
   <properties>
-    <version.swarm>2017.5.0</version.swarm>
-    <version.wildfly.swarm.fraction.plugin>54</version.wildfly.swarm.fraction.plugin>
+    <version.swarm>2018.4.1</version.swarm>
+    <version.wildfly.swarm.fraction.plugin>85</version.wildfly.swarm.fraction.plugin>
     <version.wildfly-config>1.0.3.Final</version.wildfly-config>
     <version.java>1.8</version.java>
 

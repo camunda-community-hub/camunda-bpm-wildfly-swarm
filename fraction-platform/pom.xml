@@ -39,10 +39,12 @@
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
       <artifactId>container</artifactId>
+      <version>${version.swarm}</version>
     </dependency>
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
       <artifactId>ee</artifactId>
+      <version>${version.swarm}</version>
     </dependency>
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
