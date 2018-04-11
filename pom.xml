@@ -100,7 +100,6 @@
     <module>config-api</module>
     <module>fraction-platform</module>
     <module>fraction-rest</module>
-    <module>example</module>
     <module>fraction-webapp</module>
   </modules>
 
