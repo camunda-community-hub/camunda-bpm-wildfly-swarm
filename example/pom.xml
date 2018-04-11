@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.wildfly.swarm</groupId>
+  <groupId>org.camunda.bpm</groupId>
   <artifactId>camunda-bpm-swarm-example</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <properties>
-    <version.swarm>2017.5.0</version.swarm>
+    <version.swarm>2018.4.1</version.swarm>
     <camunda.version>7.9.0-SNAPSHOT</camunda.version>
   </properties>
 
@@ -44,8 +44,8 @@
   <dependencies>
     <!-- WildFly Swarm Fractions -->
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>camunda-bpm-swarm-fraction-webapp</artifactId>
+      <groupId>org.camunda.bpm</groupId>
+      <artifactId>camunda-bpm-swarm-fraction-webapp-ee</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
@@ -77,6 +77,7 @@
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
       <artifactId>security</artifactId>
+      <version>${version.swarm}</version>
     </dependency>
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
@@ -139,6 +140,7 @@
         </executions>
         <configuration>
           <mainClass>org.wildfly.swarm.camunda.bpm.ExampleMain</mainClass>
+          <debugPort>5005</debugPort>
         </configuration>
       </plugin>
       <plugin>

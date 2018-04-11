@@ -27,7 +27,7 @@ org.camunda.template-engines:camunda-template-engines-freemarker
 org.camunda.commons:camunda-commons-typed-values
 org.camunda.commons:camunda-commons-logging
 org.camunda.commons:camunda-commons-utils
-org.wildfly.swarm:camunda-bpm-swarm-config-api
+org.camunda.bpm:camunda-bpm-swarm-config-api
 org.wildfly.swarm:config-api-runtime
 org.codehaus.groovy:groovy-all
 org.apache.httpcomponents:httpclient

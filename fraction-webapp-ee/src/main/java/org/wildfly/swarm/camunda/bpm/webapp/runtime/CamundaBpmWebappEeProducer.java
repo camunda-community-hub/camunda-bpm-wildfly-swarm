@@ -16,7 +16,7 @@ import org.wildfly.swarm.spi.api.ArtifactLookup;
 @ApplicationScoped
 public class CamundaBpmWebappEeProducer {
 
-  public static final String MODULE = "org.wildfly.swarm.camunda.bpm.swarm.fraction.webapp.ee";        //TODO why this module looks like this???
+  public static final String MODULE = "org.camunda.bpm.camunda.bpm.swarm.fraction.webapp.ee";
 
   private static final Logger LOGGER = Logger.getLogger("CamundaBpmWebappEeProducer");
 

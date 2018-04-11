@@ -5,7 +5,7 @@
     "user": "admin",
     "pass": "admin"
   },
-  "module": "org.wildfly.swarm.camunda-bpm-swarm-config-api",
+  "module": "org.camunda.bpm.camunda-bpm-swarm-config-api",
   "generatorTargets": [
     "/subsystem=camunda-bpm-platform"
   ]
