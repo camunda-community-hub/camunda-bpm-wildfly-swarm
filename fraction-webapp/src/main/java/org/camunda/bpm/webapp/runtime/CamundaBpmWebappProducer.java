@@ -1,10 +1,8 @@
-package org.wildfly.swarm.camunda.bpm.webapp.runtime;
+package org.camunda.bpm.webapp.runtime;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
-import java.util.List;
-import java.util.logging.Logger;
 import org.jboss.shrinkwrap.api.Archive;
 import org.wildfly.swarm.bootstrap.env.ApplicationEnvironment;
 import org.wildfly.swarm.bootstrap.env.FractionManifest;
@@ -14,11 +12,9 @@ import org.wildfly.swarm.spi.api.ArtifactLookup;
  * @author Svetlana Dorokhova.
  */
 @ApplicationScoped
-public class CamundaBpmWebappEeProducer {
+public class CamundaBpmWebappProducer {
 
-  public static final String MODULE = "org.camunda.bpm.camunda.bpm.swarm.fraction.webapp.ee";
-
-  private static final Logger LOGGER = Logger.getLogger("CamundaBpmWebappEeProducer");
+  public static final String MODULE = "org.camunda.bpm.camunda.bpm.swarm.fraction.webapp";
 
   @Inject
   ArtifactLookup lookup;
@@ -27,11 +23,9 @@ public class CamundaBpmWebappEeProducer {
   Archive camundaBpmEngineRest() throws Exception {
     String deploymentName = "camunda-webapp.war";
     String group = "org.camunda.bpm.webapp";
-    String artifact = "camunda-webapp-ee-jboss";
+    String artifact = "camunda-webapp-jboss";
     String packaging = "war";
     String version = lookupVersion(group, artifact, packaging);
-    System.out.println("Version found: " + version);
-    LOGGER.info("Version found: " + version);
     String gav = group + ":" + artifact + ":" + packaging + ":" + version;
 
     Archive deployment = this.lookup.artifact(gav, deploymentName);

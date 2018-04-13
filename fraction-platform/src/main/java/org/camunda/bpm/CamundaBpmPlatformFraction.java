@@ -1,4 +1,4 @@
-package org.wildfly.swarm.camunda.bpm;
+package org.camunda.bpm;
 
 import org.wildfly.swarm.config.CamundaBpmPlatform;
 import org.wildfly.swarm.config.camunda.bpm.platform.JobExecutor;
