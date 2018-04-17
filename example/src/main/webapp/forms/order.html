@@ -1,0 +1,43 @@
+<form class="form-horizontal"
+      role="form">
+
+  <p>Do you approve this order?</p>
+
+  <div class="form-group">
+    <label class="control-label col-md-2">Customer</label>
+    <div class="col-md-8">
+      <input cam-variable-name="customer"
+      cam-variable-type="String"
+             type="text"
+             name="customer"
+             class="form-control" />
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-md-2">Address</label>
+    <div class="col-md-8">
+      <input cam-variable-name="address"
+      cam-variable-type="String"
+             type="text"
+             name="address"
+             class="form-control" />
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-md-2">pizza</label>
+    <div class="col-md-8">
+      <select cam-variable-name="pizza"
+      cam-variable-type="String"
+             type="text"
+             name="pizza"
+             class="form-control"
+             required>
+        <option></option>
+        <option value="Margarita">Margarita</option>
+        <option value="Salami">Salami</option>
+        <option value="Tonno">Tonno</option>
+        <option value="Prosciutto">Prosciutto</option>
+      </select>
+    </div>
+  </div>
+</form>

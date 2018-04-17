@@ -140,7 +140,6 @@
         </executions>
         <configuration>
           <mainClass>org.camunda.bpm.ExampleMain</mainClass>
-          <debugPort>5005</debugPort>
         </configuration>
       </plugin>
       <plugin>
