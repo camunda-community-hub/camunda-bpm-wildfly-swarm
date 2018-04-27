@@ -36,6 +36,10 @@
     <version.camunda.template-engines>1.0.1</version.camunda.template-engines>
     <license.includeTransitiveDependencies>false</license.includeTransitiveDependencies>
     <swarm.fraction.stability>stable</swarm.fraction.stability>
+
+    <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+    <!-- disable javadoc linter for JDK8 to not fail on incomplete javadoc -->
+    <additionalparam>-Xdoclint:none</additionalparam>
   </properties>
 
   <repositories>
