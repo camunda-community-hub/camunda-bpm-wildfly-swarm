@@ -5,7 +5,7 @@ You would need to add [Camunda BOM](https://docs.camunda.org/get-started/apache-
 
 * `camunda-bpm-swarm-fraction-platform` for Camunda engine
 * `camunda-bpm-swarm-fraction-rest` for Camunda REST API
-* `camunda-bpm-swarm-fraction-webapp(-ee)` for Camudnda Webapps
+* `camunda-bpm-swarm-fraction-webapp(-ee)` for Camunda Webapps
 
 Example:
 
