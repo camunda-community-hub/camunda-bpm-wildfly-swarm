@@ -14,8 +14,6 @@
   <packaging>jar</packaging>
 
   <properties>
-    <camunda.version>7.9.0-SNAPSHOT</camunda.version>
-
     <cargo.timeout>120000</cargo.timeout>
     <cargo.deploy.timeout>60000</cargo.deploy.timeout>
     <jboss.http.port>8080</jboss.http.port>
