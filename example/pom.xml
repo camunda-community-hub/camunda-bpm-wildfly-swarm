@@ -46,7 +46,7 @@
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-bpm-swarm-fraction-webapp-ee</artifactId>
-      <version>${project.version}</version>
+      <version>1.0.0</version>
     </dependency>
     <dependency>
       <groupId>org.wildfly.swarm</groupId>
