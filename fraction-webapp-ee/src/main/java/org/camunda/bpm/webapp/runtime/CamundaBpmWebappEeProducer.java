@@ -30,7 +30,6 @@ public class CamundaBpmWebappEeProducer {
     String artifact = "camunda-webapp-ee-jboss";
     String packaging = "war";
     String version = lookupVersion(group, artifact, packaging);
-    System.out.println("Version found: " + version);
     LOGGER.info("Version found: " + version);
     String gav = group + ":" + artifact + ":" + packaging + ":" + version;
 
