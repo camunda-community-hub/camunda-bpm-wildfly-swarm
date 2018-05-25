@@ -4,7 +4,7 @@
   <parent>
     <artifactId>camunda-bpm-swarm-root</artifactId>
     <groupId>org.camunda.bpm</groupId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
   </parent>
 
   <artifactId>camunda-bpm-swarm-fraction-platform</artifactId>
