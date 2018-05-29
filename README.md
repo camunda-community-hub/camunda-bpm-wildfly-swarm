@@ -28,5 +28,5 @@ To use enterprise version of Camunda:
 
 ## Resources
 
-* [Issue Tracker](https://app.camunda.com/jira/browse/CAM/component/14052/) - if you have an idea for a new feature or want to file a bug ... this is the place to go.
+* [Issue Tracker](https://github.com/camunda/camunda-bpm-wildfly-swarm/issues) - if you have an idea for a new feature or want to file a bug ... this is the place to go.
 * [Camunda Contributing Guidelines](https://github.com/camunda/camunda-bpm-platform/blob/master/CONTRIBUTING.md) - check this if you want to contribute
