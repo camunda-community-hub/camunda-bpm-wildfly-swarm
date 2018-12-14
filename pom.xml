@@ -18,7 +18,7 @@
   <properties>
     <version.thorntail>2.2.1.Final</version.thorntail>
     <version.thorntail.fraction.plugin>91</version.thorntail.fraction.plugin>
-    <version.wildfly-config>1.0.3.Final</version.wildfly-config>
+    <version.thorntail-config>1.5.3</version.thorntail-config>
     <version.java>1.8</version.java>
 
     <!-- for SNAPSHOT versions ${camunda.version} and ${camunda-webapp-ee.version} will be the same, for released versions, the latter must be with -ee suffix -->
@@ -27,13 +27,13 @@
     <camunda-webapp-ee.version>${camunda.version}-ee</camunda-webapp-ee.version>                <!-- for released versions -->
 
     <version.mybatis>3.4.4</version.mybatis>
-    <version.wildfly>15.0.0.Final</version.wildfly>
+    <version.wildfly>14.0.1.Final</version.wildfly>
     <version.camunda.commons>1.5.0</version.camunda.commons>
     <version.camunda.connect>1.0.6</version.camunda.connect>
     <version.camunda.spin>1.5.1</version.camunda.spin>
     <version.camunda.template-engines>1.0.1</version.camunda.template-engines>
     <license.includeTransitiveDependencies>false</license.includeTransitiveDependencies>
-    <swarm.fraction.stability>stable</swarm.fraction.stability>
+    <thorntail.fraction.stability>stable</thorntail.fraction.stability>
 
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     <!-- disable javadoc linter for JDK8 to not fail on incomplete javadoc -->

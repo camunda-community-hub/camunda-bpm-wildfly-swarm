@@ -28,7 +28,7 @@ org.camunda.commons:camunda-commons-typed-values
 org.camunda.commons:camunda-commons-logging
 org.camunda.commons:camunda-commons-utils
 org.camunda.bpm:camunda-bpm-swarm-config-api
-org.wildfly.swarm:config-api-runtime
+io.thorntail:config-api-runtime
 org.codehaus.groovy:groovy-all
 org.apache.httpcomponents:httpclient
 org.apache.httpcomponents:httpcore
