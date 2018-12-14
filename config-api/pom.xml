@@ -30,7 +30,7 @@
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>config-api-runtime</artifactId>
       <version>${version.wildfly-config}</version>
     </dependency>
@@ -54,7 +54,7 @@
               <artifactItems>
                 <artifactItem>
                   <groupId>org.camunda.bpm.wildfly</groupId>
-                  <artifactId>camunda-wildfly11-assembly</artifactId>
+                  <artifactId>camunda-wildfly-assembly</artifactId>
                   <version>${camunda.version}</version>
                   <type>tar.gz</type>
                 </artifactItem>
@@ -91,7 +91,7 @@
           <!-- Container configuration -->
           <container>
             <type>installed</type>
-            <containerId>wildfly11x</containerId>
+            <containerId>wildfly14x</containerId>
             <append>false</append>
             <home>${wildfly.runtime.location}</home>
             <timeout>${cargo.timeout}</timeout>
@@ -123,7 +123,7 @@
         <version>1.6.0</version>
         <dependencies>
           <dependency>
-            <groupId>org.wildfly.swarm</groupId>
+            <groupId>io.thorntail</groupId>
             <artifactId>config-api-generator</artifactId>
             <version>${version.wildfly-config}</version>
           </dependency>

@@ -1,6 +1,6 @@
-# Camunda Wildfly Swarm extension
+# Camunda Thorntail extension
 
-This Camunda community extension provides Wildfly Swarm fractions, which can be used to easily include Camunda in your Wildfly Swarm applications.
+This Camunda community extension provides Wildfly Swarm fractions, which can be used to easily include Camunda in your Thorntail applications.
 You would need to add [Camunda BOM](https://docs.camunda.org/get-started/apache-maven/) and "Swarm fraction(s)" to your POM file. Available fractions are:
 
 * `camunda-bpm-swarm-fraction-platform` for Camunda engine
@@ -11,7 +11,7 @@ Example:
 
 ```xml
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>camunda-bpm-swarm-fraction-webapp</artifactId>
       <version>${fraction.version}</version>
     </dependency>

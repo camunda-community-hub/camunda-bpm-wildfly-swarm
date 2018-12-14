@@ -35,27 +35,27 @@
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>container</artifactId>
-      <version>${version.swarm}</version>
+      <version>${version.thorntail}</version>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>ee</artifactId>
-      <version>${version.swarm}</version>
+      <version>${version.thorntail}</version>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>ejb</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>undertow</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>spi</artifactId>
-      <version>${version.swarm}</version>
+      <version>${version.thorntail}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -86,8 +86,8 @@
     </resources>
     <plugins>
       <plugin>
-        <groupId>org.wildfly.swarm</groupId>
-        <artifactId>wildfly-swarm-fraction-plugin</artifactId>
+        <groupId>io.thorntail</groupId>
+        <artifactId>thorntail-fraction-plugin</artifactId>
       </plugin>
     </plugins>
   </build>
