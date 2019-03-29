@@ -1,61 +1,60 @@
-<?xml version="1.0" encoding="UTF-8"?>
-        <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>camunda-bpm-swarm-root</artifactId>
+    <artifactId>camunda-bpm-thorntail-root</artifactId>
     <groupId>org.camunda.bpm</groupId>
     <version>1.1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-bpm-swarm-fraction-platform</artifactId>
+  <artifactId>camunda-bpm-thorntail-fraction-platform</artifactId>
 
   <packaging>jar</packaging>
 
   <properties>
-    <swarm.fraction.stability>stable</swarm.fraction.stability>
+    <thorntail.fraction.stability>stable</thorntail.fraction.stability>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine</artifactId>
-      <version>${camunda.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.camunda.bpm.wildfly</groupId>
       <artifactId>camunda-wildfly-subsystem</artifactId>
-      <version>${camunda.version}</version>
+      <version>${version.camunda}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-bpm-swarm-config-api</artifactId>
+      <artifactId>camunda-bpm-thorntail-config-api</artifactId>
       <version>${project.version}</version>
       <scope>compile</scope>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>container</artifactId>
-      <version>${version.swarm}</version>
+      <version>${version.thorntail}</version>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>ee</artifactId>
-      <version>${version.swarm}</version>
+      <version>${version.thorntail}</version>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>ejb</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>undertow</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>spi</artifactId>
-      <version>${version.swarm}</version>
+      <version>${version.thorntail}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -86,8 +85,8 @@
     </resources>
     <plugins>
       <plugin>
-        <groupId>org.wildfly.swarm</groupId>
-        <artifactId>wildfly-swarm-fraction-plugin</artifactId>
+        <groupId>io.thorntail</groupId>
+        <artifactId>thorntail-fraction-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

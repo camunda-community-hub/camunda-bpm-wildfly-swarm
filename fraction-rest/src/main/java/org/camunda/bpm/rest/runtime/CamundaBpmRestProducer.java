@@ -1,4 +1,4 @@
-package org.wildfly.swarm.camunda.bpm.rest.runtime;
+package org.camunda.bpm.rest.runtime;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.enterprise.inject.Produces;
@@ -14,7 +14,7 @@ import org.wildfly.swarm.spi.api.ArtifactLookup;
 @ApplicationScoped
 public class CamundaBpmRestProducer {
 
-  public static final String MODULE = "org.wildfly.swarm.camunda.bpm.swarm.fraction.rest";        //TODO why this module looks like this???
+  public static final String MODULE = "io.thorntail.camunda.bpm.thorntail.fraction.rest";        //TODO why this module looks like this???
 
   @Inject
   ArtifactLookup lookup;
