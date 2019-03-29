@@ -24,7 +24,7 @@ public class ExampleMain {
   private static CamundaBpmPlatformFraction configureFraction() {
     CamundaBpmPlatformFraction fraction = new CamundaBpmPlatformFraction();
     fraction.applyDefaults();
-    fraction.subresources().processEngines("default").historyLevel("none");
+    fraction.subresources().processEngines("default").historyLevel("full");
     return fraction;
   }
 

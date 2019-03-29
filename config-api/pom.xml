@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
-        <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <artifactId>camunda-bpm-swarm-root</artifactId>
+    <artifactId>camunda-bpm-thorntail-root</artifactId>
     <groupId>org.camunda.bpm</groupId>
     <version>1.1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>camunda-bpm-swarm-config-api</artifactId>
+  <artifactId>camunda-bpm-thorntail-config-api</artifactId>
 
   <packaging>jar</packaging>
 
@@ -24,15 +24,15 @@
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine-rest</artifactId>
+      <version>${version.camunda}</version>
       <classifier>wildfly</classifier>
-      <version>${camunda.version}</version>
       <type>war</type>
       <scope>test</scope>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>config-api-runtime</artifactId>
-      <version>${version.wildfly-config}</version>
+      <version>${version.thorntail-config}</version>
     </dependency>
   </dependencies>
 
@@ -54,8 +54,8 @@
               <artifactItems>
                 <artifactItem>
                   <groupId>org.camunda.bpm.wildfly</groupId>
-                  <artifactId>camunda-wildfly11-assembly</artifactId>
-                  <version>${camunda.version}</version>
+                  <artifactId>camunda-wildfly-assembly</artifactId>
+                  <version>${version.camunda}</version>
                   <type>tar.gz</type>
                 </artifactItem>
               </artifactItems>
@@ -70,7 +70,7 @@
       <plugin>
         <groupId>org.codehaus.cargo</groupId>
         <artifactId>cargo-maven2-plugin</artifactId>
-        <version>1.6.7</version>
+        <version>1.7.3</version>
         <executions>
           <execution>
             <id>start-container</id>
@@ -91,7 +91,7 @@
           <!-- Container configuration -->
           <container>
             <type>installed</type>
-            <containerId>wildfly11x</containerId>
+            <containerId>wildfly14x</containerId>
             <append>false</append>
             <home>${wildfly.runtime.location}</home>
             <timeout>${cargo.timeout}</timeout>
@@ -123,9 +123,9 @@
         <version>1.6.0</version>
         <dependencies>
           <dependency>
-            <groupId>org.wildfly.swarm</groupId>
+            <groupId>io.thorntail</groupId>
             <artifactId>config-api-generator</artifactId>
-            <version>${version.wildfly-config}</version>
+            <version>${version.thorntail-config}</version>
           </dependency>
         </dependencies>
         <executions>

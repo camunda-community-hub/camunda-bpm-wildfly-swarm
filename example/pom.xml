@@ -1,17 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.camunda.bpm</groupId>
-  <artifactId>camunda-bpm-swarm-example</artifactId>
+  <artifactId>camunda-bpm-thorntail-example</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
   <properties>
-    <version.swarm>2018.4.1</version.swarm>
-    <camunda.version>7.9.0</camunda.version>
+    <version.thorntail>2.4.0.Final</version.thorntail>
+    <version.camunda>7.11.0</version.camunda>
+    <version.camunda-bpm-thorntail>1.1.0-SNAPSHOT</version.camunda-bpm-thorntail>
   </properties>
 
   <repositories>
@@ -27,14 +25,14 @@
       <dependency>
         <groupId>org.camunda.bpm</groupId>
         <artifactId>camunda-bom</artifactId>
-        <version>${camunda.version}</version>
+        <version>${version.camunda}</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
       <dependency>
-        <groupId>org.wildfly.swarm</groupId>
+        <groupId>io.thorntail</groupId>
         <artifactId>bom-all</artifactId>
-        <version>${version.swarm}</version>
+        <version>${version.thorntail}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -42,18 +40,18 @@
   </dependencyManagement>
 
   <dependencies>
-    <!-- WildFly Swarm Fractions -->
+    <!-- Thorntail Fractions -->
     <dependency>
       <groupId>org.camunda.bpm</groupId>
-      <artifactId>camunda-bpm-swarm-fraction-webapp-ee</artifactId>
-      <version>1.0.0</version>
+      <artifactId>camunda-bpm-thorntail-fraction-webapp-ee</artifactId>
+      <version>${version.camunda-bpm-thorntail}</version>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>jpa</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>datasources</artifactId>
     </dependency>
     <dependency>
@@ -63,40 +61,40 @@
     </dependency>
 
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>cdi</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>ejb</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>undertow</artifactId>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>security</artifactId>
-      <version>${version.swarm}</version>
+      <version>${version.thorntail}</version>
     </dependency>
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>jaxrs</artifactId>
     </dependency>
 
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
+      <groupId>io.thorntail</groupId>
       <artifactId>management</artifactId>
     </dependency>
 
-    <!-- camunda engine dependency -->
+    <!-- Camunda engine dependency -->
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine</artifactId>
       <scope>provided</scope>
     </dependency>
 
-    <!-- camunda cdi beans -->
+    <!-- Camunda cdi beans -->
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine-cdi</artifactId>
@@ -128,9 +126,9 @@
     <finalName>example</finalName>
     <plugins>
       <plugin>
-        <groupId>org.wildfly.swarm</groupId>
-        <artifactId>wildfly-swarm-plugin</artifactId>
-        <version>${version.swarm}</version>
+        <groupId>io.thorntail</groupId>
+        <artifactId>thorntail-maven-plugin</artifactId>
+        <version>${version.thorntail}</version>
         <executions>
           <execution>
             <goals>

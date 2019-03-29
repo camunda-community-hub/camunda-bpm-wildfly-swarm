@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <parent>
-    <artifactId>camunda-bpm-swarm-root</artifactId>
+    <artifactId>camunda-bpm-thorntail-root</artifactId>
     <groupId>org.camunda.bpm</groupId>
     <version>1.1.0-SNAPSHOT</version>
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>camunda-bpm-swarm-fraction-rest</artifactId>
+  <artifactId>camunda-bpm-thorntail-fraction-rest</artifactId>
 
   <packaging>jar</packaging>
 
@@ -15,7 +15,7 @@
       <dependency>
         <groupId>org.camunda.bpm</groupId>
         <artifactId>camunda-engine-rest</artifactId>
-        <version>${camunda.version}</version>
+        <version>${version.camunda}</version>
         <classifier>wildfly</classifier>
         <type>war</type>
         <scope>compile</scope>
@@ -23,7 +23,7 @@
 
       <dependency>
         <groupId>org.camunda.bpm</groupId>
-        <artifactId>camunda-bpm-swarm-fraction-platform</artifactId>
+        <artifactId>camunda-bpm-thorntail-fraction-platform</artifactId>
         <version>${project.version}</version>
         <scope>compile</scope>
       </dependency>
@@ -39,8 +39,8 @@
     <build>
       <plugins>
         <plugin>
-          <groupId>org.wildfly.swarm</groupId>
-          <artifactId>wildfly-swarm-fraction-plugin</artifactId>
+          <groupId>io.thorntail</groupId>
+          <artifactId>thorntail-fraction-plugin</artifactId>
         </plugin>
       </plugins>
     </build>

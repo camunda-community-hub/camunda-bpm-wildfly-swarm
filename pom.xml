@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -7,33 +6,35 @@
     <artifactId>camunda-release-parent</artifactId>
     <version>3.1</version>
     <!-- DO NOT REMOVE EMPTY TAG https://issues.apache.org/jira/browse/MNG-4687 -->
-    <relativePath />
+    <relativePath/>
   </parent>
 
   <groupId>org.camunda.bpm</groupId>
-  <artifactId>camunda-bpm-swarm-root</artifactId>
+  <artifactId>camunda-bpm-thorntail-root</artifactId>
   <packaging>pom</packaging>
   <version>1.1.0-SNAPSHOT</version>
 
   <properties>
-    <version.swarm>2018.4.1</version.swarm>
-    <version.wildfly.swarm.fraction.plugin>85</version.wildfly.swarm.fraction.plugin>
-    <version.wildfly-config>1.0.3.Final</version.wildfly-config>
+    <version.thorntail>2.4.0.Final</version.thorntail>
+    <version.thorntail.fraction.plugin>96</version.thorntail.fraction.plugin>
+    <version.thorntail-config>1.6.1</version.thorntail-config>
     <version.java>1.8</version.java>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
 
     <!-- for SNAPSHOT versions ${camunda.version} and ${camunda-webapp-ee.version} will be the same, for released versions, the latter must be with -ee suffix -->
-    <camunda.version>7.9.0</camunda.version>
-    <!-- <camunda-webapp-ee.version>${camunda.version}</camunda-webapp-ee.version> -->          <!-- for SNAPSHOT versions -->
-    <camunda-webapp-ee.version>${camunda.version}-ee</camunda-webapp-ee.version>                <!-- for released versions -->
+    <version.camunda>7.11.0</version.camunda>
+    <!-- <version.camunda-webapp-ee>${camunda.version}</version.camunda-webapp-ee> -->          <!-- for SNAPSHOT versions -->
+    <version.camunda-webapp-ee>${version.camunda}-ee</version.camunda-webapp-ee>                <!-- for released versions -->
 
+    <version.wildfly>16.0.0.Final</version.wildfly>
     <version.mybatis>3.4.4</version.mybatis>
-    <version.wildfly>11.0.0.Final</version.wildfly>
-    <version.camunda.commons>1.5.0</version.camunda.commons>
-    <version.camunda.connect>1.0.6</version.camunda.connect>
-    <version.camunda.spin>1.5.1</version.camunda.spin>
-    <version.camunda.template-engines>1.0.1</version.camunda.template-engines>
+    <version.camunda.commons>1.7.1</version.camunda.commons>
+    <version.camunda.connect>1.1.4</version.camunda.connect>
+    <version.camunda.spin>1.6.7</version.camunda.spin>
+    <version.camunda.template-engines>1.1.0</version.camunda.template-engines>
     <license.includeTransitiveDependencies>false</license.includeTransitiveDependencies>
-    <swarm.fraction.stability>stable</swarm.fraction.stability>
+    <thorntail.fraction.stability>stable</thorntail.fraction.stability>
 
     <maven.javadoc.failOnError>false</maven.javadoc.failOnError>
     <!-- disable javadoc linter for JDK8 to not fail on incomplete javadoc -->
@@ -48,19 +49,27 @@
     </repository>
   </repositories>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>camunda-bpm-nexus</id>
+      <name>Camunda BPM Maven Repository</name>
+      <url>https://app.camunda.com/nexus/content/groups/public</url>
+    </pluginRepository>
+  </pluginRepositories>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>org.wildfly.swarm</groupId>
+        <groupId>io.thorntail</groupId>
         <artifactId>bom-all</artifactId>
-        <version>${version.swarm}</version>
+        <version>${version.thorntail}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
       <dependency>
         <groupId>org.camunda.bpm</groupId>
         <artifactId>camunda-bom</artifactId>
-        <version>${camunda.version}</version>
+        <version>${version.camunda}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -71,9 +80,9 @@
     <pluginManagement>
         <plugins>
           <plugin>
-            <groupId>org.wildfly.swarm</groupId>
-            <artifactId>wildfly-swarm-fraction-plugin</artifactId>
-            <version>${version.wildfly.swarm.fraction.plugin}</version>
+            <groupId>io.thorntail</groupId>
+            <artifactId>thorntail-fraction-plugin</artifactId>
+            <version>${version.thorntail.fraction.plugin}</version>
             <executions>
               <execution>
                 <phase>process-classes</phase>

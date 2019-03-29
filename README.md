@@ -1,18 +1,18 @@
-# Camunda Wildfly Swarm extension
+# Camunda Thorntail extension
 
-This Camunda community extension provides Wildfly Swarm fractions, which can be used to easily include Camunda in your Wildfly Swarm applications.
-You would need to add [Camunda BOM](https://docs.camunda.org/get-started/apache-maven/) and "Swarm fraction(s)" to your POM file. Available fractions are:
+This Camunda community extension provides Thorntail fractions, which can be used to easily include Camunda in your Thorntail applications.
+You would need to add [Camunda BOM](https://docs.camunda.org/get-started/apache-maven/) and "Thorntail fraction(s)" to your POM file. Available fractions are:
 
-* `camunda-bpm-swarm-fraction-platform` for Camunda engine
-* `camunda-bpm-swarm-fraction-rest` for Camunda REST API
-* `camunda-bpm-swarm-fraction-webapp(-ee)` for Camunda Webapps
+* `camunda-bpm-thorntail-fraction-platform` for Camunda engine
+* `camunda-bpm-thorntail-fraction-rest` for Camunda REST API
+* `camunda-bpm-thorntail-fraction-webapp(-ee)` for Camunda Webapps
 
 Example:
 
 ```xml
     <dependency>
-      <groupId>org.wildfly.swarm</groupId>
-      <artifactId>camunda-bpm-swarm-fraction-webapp</artifactId>
+      <groupId>io.thorntail</groupId>
+      <artifactId>camunda-bpm-thorntail-fraction-webapp</artifactId>
       <version>${fraction.version}</version>
     </dependency>
 ```
@@ -24,7 +24,7 @@ Please also check [example project](https://github.com/camunda/camunda-bpm-wildf
 To use enterprise version of Camunda:
 
 1. Use enterprise Camunda version, when adding Camunda BOM, e.g. `7.9.0-ee`.
-2. Use fraction `camunda-bpm-swarm-fraction-webapp-ee` to include Camunda Enterprise Webapps.
+2. Use fraction `camunda-bpm-thorntail-fraction-webapp-ee` to include Camunda Enterprise Webapps.
 
 ## Resources
 
