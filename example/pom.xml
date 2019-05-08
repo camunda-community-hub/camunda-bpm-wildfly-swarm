@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.camunda.bpm</groupId>
@@ -10,8 +7,8 @@
   <packaging>war</packaging>
 
   <properties>
-    <version.thorntail>2.2.1.FINAL</version.thorntail>
-    <camunda.version>7.10.0</camunda.version>
+    <version.thorntail>2.4.0.Final</version.thorntail>
+    <version.camunda>7.10.0</version.camunda>
   </properties>
 
   <repositories>
@@ -27,7 +24,7 @@
       <dependency>
         <groupId>org.camunda.bpm</groupId>
         <artifactId>camunda-bom</artifactId>
-        <version>${camunda.version}</version>
+        <version>${version.camunda}</version>
         <scope>import</scope>
         <type>pom</type>
       </dependency>
@@ -89,14 +86,14 @@
       <artifactId>management</artifactId>
     </dependency>
 
-    <!-- camunda engine dependency -->
+    <!-- Camunda engine dependency -->
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine</artifactId>
       <scope>provided</scope>
     </dependency>
 
-    <!-- camunda cdi beans -->
+    <!-- Camunda cdi beans -->
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine-cdi</artifactId>

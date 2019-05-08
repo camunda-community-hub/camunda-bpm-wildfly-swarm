@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -7,7 +6,7 @@
     <artifactId>camunda-release-parent</artifactId>
     <version>3.1</version>
     <!-- DO NOT REMOVE EMPTY TAG https://issues.apache.org/jira/browse/MNG-4687 -->
-    <relativePath />
+    <relativePath/>
   </parent>
 
   <groupId>org.camunda.bpm</groupId>
@@ -16,22 +15,24 @@
   <version>1.1.0-SNAPSHOT</version>
 
   <properties>
-    <version.thorntail>2.2.1.Final</version.thorntail>
-    <version.thorntail.fraction.plugin>91</version.thorntail.fraction.plugin>
-    <version.thorntail-config>1.5.3</version.thorntail-config>
+    <version.thorntail>2.4.0.Final</version.thorntail>
+    <version.thorntail.fraction.plugin>96</version.thorntail.fraction.plugin>
+    <version.thorntail-config>1.6.1</version.thorntail-config>
     <version.java>1.8</version.java>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
 
     <!-- for SNAPSHOT versions ${camunda.version} and ${camunda-webapp-ee.version} will be the same, for released versions, the latter must be with -ee suffix -->
-    <camunda.version>7.10.0</camunda.version>
-    <!-- <camunda-webapp-ee.version>${camunda.version}</camunda-webapp-ee.version> -->          <!-- for SNAPSHOT versions -->
-    <camunda-webapp-ee.version>${camunda.version}-ee</camunda-webapp-ee.version>                <!-- for released versions -->
+    <version.camunda>7.10.0</version.camunda>
+    <!-- <version.camunda-webapp-ee>${camunda.version}</version.camunda-webapp-ee> -->          <!-- for SNAPSHOT versions -->
+    <camunda-webapp-ee.version>${version.camunda}-ee</camunda-webapp-ee.version>                <!-- for released versions -->
 
-    <version.mybatis>3.4.4</version.mybatis>
     <version.wildfly>14.0.1.Final</version.wildfly>
-    <version.camunda.commons>1.5.0</version.camunda.commons>
-    <version.camunda.connect>1.0.6</version.camunda.connect>
-    <version.camunda.spin>1.5.1</version.camunda.spin>
-    <version.camunda.template-engines>1.0.1</version.camunda.template-engines>
+    <version.mybatis>3.4.4</version.mybatis>
+    <version.camunda.commons>1.6.1</version.camunda.commons>
+    <version.camunda.connect>1.1.0</version.camunda.connect>
+    <version.camunda.spin>1.6.3</version.camunda.spin>
+    <version.camunda.template-engines>1.1.0</version.camunda.template-engines>
     <license.includeTransitiveDependencies>false</license.includeTransitiveDependencies>
     <thorntail.fraction.stability>stable</thorntail.fraction.stability>
 
@@ -48,6 +49,14 @@
     </repository>
   </repositories>
 
+  <pluginRepositories>
+    <pluginRepository>
+      <id>camunda-bpm-nexus</id>
+      <name>Camunda BPM Maven Repository</name>
+      <url>https://app.camunda.com/nexus/content/groups/public</url>
+    </pluginRepository>
+  </pluginRepositories>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
@@ -60,7 +69,7 @@
       <dependency>
         <groupId>org.camunda.bpm</groupId>
         <artifactId>camunda-bom</artifactId>
-        <version>${camunda.version}</version>
+        <version>${version.camunda}</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

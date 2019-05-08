@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-        <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <artifactId>camunda-bpm-thorntail-root</artifactId>
@@ -24,8 +24,8 @@
     <dependency>
       <groupId>org.camunda.bpm</groupId>
       <artifactId>camunda-engine-rest</artifactId>
+      <version>${version.camunda}</version>
       <classifier>wildfly</classifier>
-      <version>${camunda.version}</version>
       <type>war</type>
       <scope>test</scope>
     </dependency>
@@ -55,7 +55,7 @@
                 <artifactItem>
                   <groupId>org.camunda.bpm.wildfly</groupId>
                   <artifactId>camunda-wildfly-assembly</artifactId>
-                  <version>${camunda.version}</version>
+                  <version>${version.camunda}</version>
                   <type>tar.gz</type>
                 </artifactItem>
               </artifactItems>
@@ -70,7 +70,7 @@
       <plugin>
         <groupId>org.codehaus.cargo</groupId>
         <artifactId>cargo-maven2-plugin</artifactId>
-        <version>1.6.11</version>
+        <version>1.7.3</version>
         <executions>
           <execution>
             <id>start-container</id>

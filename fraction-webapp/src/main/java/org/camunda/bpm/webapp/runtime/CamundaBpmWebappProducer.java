@@ -14,7 +14,7 @@ import org.wildfly.swarm.spi.api.ArtifactLookup;
 @ApplicationScoped
 public class CamundaBpmWebappProducer {
 
-  public static final String MODULE = "org.camunda.bpm.camunda.bpm.swarm.fraction.webapp";
+  public static final String MODULE = "org.camunda.bpm.camunda.bpm.thorntail.fraction.webapp";
 
   @Inject
   ArtifactLookup lookup;

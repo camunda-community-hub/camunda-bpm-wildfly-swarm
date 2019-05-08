@@ -13,7 +13,6 @@
 
   <properties>
     <thorntail.fraction.stability>stable</thorntail.fraction.stability>
-    <java.version>1.8</java.version>
   </properties>
 
   <dependencies>
@@ -21,7 +20,7 @@
     <dependency>
       <groupId>org.camunda.bpm.webapp</groupId>
       <artifactId>camunda-webapp-jboss</artifactId>
-      <version>${camunda.version}</version>
+      <version>${version.camunda}</version>
       <type>war</type>
       <scope>compile</scope>
     </dependency>

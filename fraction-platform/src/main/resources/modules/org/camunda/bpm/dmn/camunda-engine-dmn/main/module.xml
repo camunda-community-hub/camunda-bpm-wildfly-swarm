@@ -1,6 +1,6 @@
 <module xmlns="urn:jboss:module:1.3" name="org.camunda.bpm.dmn.camunda-engine-dmn">
   <resources>
-    <artifact name="org.camunda.bpm.dmn:camunda-engine-dmn:${camunda.version}" />
+    <artifact name="org.camunda.bpm.dmn:camunda-engine-dmn:${version.camunda}" />
   </resources>
 
   <dependencies>

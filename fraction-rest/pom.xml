@@ -15,7 +15,7 @@
       <dependency>
         <groupId>org.camunda.bpm</groupId>
         <artifactId>camunda-engine-rest</artifactId>
-        <version>${camunda.version}</version>
+        <version>${version.camunda}</version>
         <classifier>wildfly</classifier>
         <type>war</type>
         <scope>compile</scope>
