@@ -102,6 +102,7 @@
             <properties>
               <cargo.servlet.port>${jboss.http.port}</cargo.servlet.port>
               <cargo.jboss.management.port>${jboss.management.port}</cargo.jboss.management.port>
+              <cargo.jvmargs>-Djava.net.preferIPv4Stack=true</cargo.jvmargs>
             </properties>
           </configuration>
           <deployables>
