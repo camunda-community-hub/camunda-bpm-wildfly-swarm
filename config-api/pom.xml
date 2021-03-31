@@ -73,14 +73,14 @@
         <version>1.9.3</version>
         <executions>
           <execution>
-            <id>start-container</id>
-            <phase>generate-sources</phase>
+            <id>start</id>
+            <phase>pre-integration-test</phase>
             <goals>
               <goal>start</goal>
             </goals>
           </execution>
           <execution>
-            <id>stop-container</id>
+            <id>stop</id>
             <phase>post-integration-test</phase>
             <goals>
               <goal>stop</goal>
