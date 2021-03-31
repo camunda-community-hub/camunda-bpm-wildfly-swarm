@@ -69,8 +69,8 @@
       <!-- run Wildfly and stop later -->
       <plugin>
         <groupId>org.codehaus.cargo</groupId>
-        <artifactId>cargo-maven2-plugin</artifactId>
-        <version>1.7.3</version>
+        <artifactId>cargo-maven3-plugin</artifactId>
+        <version>1.9.3</version>
         <executions>
           <execution>
             <id>start-container</id>
