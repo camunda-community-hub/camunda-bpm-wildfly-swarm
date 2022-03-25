@@ -1,5 +1,8 @@
 # Camunda Thorntail extension
 
+[![](https://img.shields.io/badge/Community%20Extension-An%20open%20source%20community%20maintained%20project-FF4700)](https://github.com/camunda-community-hub/community)
+[![](https://img.shields.io/badge/Lifecycle-Deprecated-yellowgreen)](https://github.com/Camunda-Community-Hub/community/blob/main/extension-lifecycle.md#deprecated-)
+
 This Camunda community extension provides Thorntail fractions, which can be used to easily include Camunda in your Thorntail applications.
 You would need to add [Camunda BOM](https://docs.camunda.org/get-started/apache-maven/) and "Thorntail fraction(s)" to your POM file. Available fractions are:
 
